@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { repoMap, featureNotSupportedError } from '../../common/constants';
 import type { RootState } from '../../common/store';
 import useFilterCompareResults from '../../hooks/useFilterCompareResults';
+import { Strings } from '../../resources/Strings';
 import { Revision } from '../../types/state';
 import LearnMoreButton from '../Shared/LearnMoreButton';
 import PerfCompareHeader from '../Shared/PerfCompareHeader';
@@ -16,6 +17,8 @@ import PerfCompareHeaderDescription from '../Shared/PerfCompareHeaderDescription
 import RevisionSearch from '../Shared/RevisionSearch';
 import SelectedRevisionsTable from '../Shared/SelectedRevisionsTable';
 import SearchViewInit from './SearchViewInit';
+
+const strings = Strings.components.compareDefault.sharedCollasped;
 
 function SearchView(props: SearchViewProps) {
   const navigate = useNavigate();
@@ -44,7 +47,7 @@ function SearchView(props: SearchViewProps) {
   const { selectedRevisions } = props;
 
   return (
-    <Container maxWidth="lg" className='perfcompare-body'>
+    <Container className="perfcompare-body" maxWidth="lg">
       {/* Component to fetch recent revisions on mount */}
       <SearchViewInit />
       <PerfCompareHeader />
@@ -62,7 +65,7 @@ function SearchView(props: SearchViewProps) {
             variant="contained"
             onClick={() => goToCompareResultsPage(selectedRevisions)}
           >
-            compare
+            {strings.button}
             <ArrowForward className="compare-icon" />
           </Button>
         )}
