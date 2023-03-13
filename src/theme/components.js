@@ -6,6 +6,7 @@ import linux from './img/linux.svg';
 import low from './img/low.svg';
 import med from './img/med.svg';
 import osx from './img/osx.svg';
+import perfCompareBackground from './img/perfCompareBackground.png';
 import windows from './img/windows.svg';
 import zap from './img/zap-10.svg';
 
@@ -110,7 +111,7 @@ const components = {
         },
         '&.background-icon.dark-mode': {
           filter: 'invert(100%)',
-        },
+        }, 
         '&.high': {
           backgroundImage: `url(${high})`,
         },
@@ -155,13 +156,13 @@ const components = {
         '&.perfcompare-header': {
           '&:after': {
             backgroundImage: `url(${zap})`,
-            backgroundPosition: '55%',
+            backgroundPosition: '52%',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '290px',
+            backgroundSize: '196px',
             content: '""',
             display: 'block',
             height: '0.3em',
-            marginTop: '-5px',
+            marginTop: '-3px',
           },
         },
       },
@@ -224,10 +225,15 @@ const components = {
         '&.perfcompare-body': {
           minHeight: '85vh',
         },
+        '&.appcontainer-body': {
+          backgroundImage: `url(${perfCompareBackground})`,
+          backgroundPosition: 'top center',
+          backgroundRepeat: 'no-repeat',
+        },
       },
     },
   },
-  MuiAlert: {
+  /* MuiAlert: {
     styleOverrides: {
       root: {
         '&.feedback-alert': {
@@ -236,7 +242,7 @@ const components = {
         },
       },
     },
-  },
+  },  */
 };
 
 export default components;
