@@ -211,10 +211,9 @@ const components = {
         '&.missing-confidence-button': {
           borderRadius: '0',
           paddingBottom: '0',
-
-          '&:hover': {
-            backgroundColor: 'transparent',
-          },
+        },
+        '&:hover': {
+          backgroundColor: 'transparent',
         },
       },
     },
@@ -247,7 +246,6 @@ const components = {
           height: 18,
           position: "absolute",
           border: '2px solid #000000',
-                  
         },
         '& .MuiSwitch-thumb': {
           width: 16,
