@@ -1,17 +1,11 @@
 // Style overrides for typography to match Mozilla Protocol design system
 // https://protocol.mozilla.org/
-
-
 import { useMemo, useState } from 'react';
 
-//import { orange, amber, grey } from '@mui/material/colors';
 import { createTheme, Theme } from '@mui/material/styles';
-
-
 
 import components from './components';
 import typography from './typography';
-
 
 const useProtocolTheme = () => {
   const [mode, setMode] = useState<'light' | 'dark'>('light');
@@ -27,19 +21,15 @@ const useProtocolTheme = () => {
           mode,
           ...(mode === 'light' ? {
             background: {
-              default: '#fff',
-            },
-            text: {
-              primary: '#000',
-              
+              default: '#ffffff',
             },
           } : {
             background: {
-              default: '#edf2f4',
+              default: '#f5f5f5',
             },
             text: {
-              primary: '#000',
-              secondary: '#000',
+              primary: '#000000',
+              secondary: '#808080',
             },
           }),
         },
@@ -48,43 +38,6 @@ const useProtocolTheme = () => {
       }),
     [mode],
   );
-
-  /* const protocolTheme: Theme = useMemo(
-    () =>
-      createTheme({
-        palette: { 
-          mode, 
-          ...(mode === 'dark' ? {
-            background: {
-              default: '#C0C0C0',
-              paper: '#000000',
-            },
-            divider: amber[200],
-            text: {
-              primary: grey[900],
-              secondary: grey[800],
-            },
-          } : {
-            primary: orange,
-            divider: orange[200],
-            text: {
-              primary: '#000',
-              secondary: grey[500],
-            },
-            background: {
-              default: '#fff',
-              paper: orange[900],
-            },
-          }),
-          
-        },
-        components,
-        typography,
-      }),
-    [mode],
-  );
- */
-  
 
   return { mode, toggleColorMode, protocolTheme };
 };

@@ -225,24 +225,44 @@ const components = {
         '&.perfcompare-body': {
           minHeight: '85vh',
         },
-        '&.appcontainer-body': {
+        '&.background-container': {
           backgroundImage: `url(${perfCompareBackground})`,
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
         },
       },
     },
   },
-  /* MuiAlert: {
+  MuiFormControlLabel: {
     styleOverrides: {
       root: {
-        '&.feedback-alert': {
-          backgroundImage:
-            'linear-gradient( 45deg, rgb(138,35,135) 10%, rgb(233,64,87) 50%, rgb(242,113,33) 100% )',
+        '&.darkMode': {
+          color: '#000000',
+        },
+        '& .MuiSwitch-track': {
+          backgroundColor: '#696969', 
+          borderRadius: 20 / 2,
+          width: 40,
+          height: 18,
+          position: "absolute",
+          border: '2px solid #000000',
+                  
+        },
+        '& .MuiSwitch-thumb': {
+          width: 16,
+          height: 16,
+          margin: 4,
+        },
+        '& .MuiSwitch-switchBase.Mui-checked': {
+          color: '#696969',
+        },
+        '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+          backgroundColor: '#c7c7c7',
         },
       },
     },
-  },  */
+  },
 };
 
 export default components;
