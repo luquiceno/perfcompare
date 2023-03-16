@@ -261,6 +261,20 @@ const components = {
       },
     },
   },
+  MuiFormControl: {
+    styleOverrides: {
+      root: {
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: 'silver',
+          },
+        },
+        '& .MuiSvgIcon-root': {
+          color: '#808080',
+        },
+      },
+    },
+  },
 };
 
 export default components;
